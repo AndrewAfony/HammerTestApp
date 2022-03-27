@@ -21,17 +21,19 @@
             android:background="@color/white">
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_banner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:spanCount="1"
-                android:scrollbars="horizontal"
-                android:layout_marginVertical="16dp"/>
+                android:layout_marginTop="?attr/actionBarSize"
+                android:layout_marginStart="16dp"
+                android:scrollbars="none" />
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
-                app:layout_scrollFlags="scroll|snap"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
                 android:background="@color/white">
 
                 <TextView
@@ -39,9 +41,10 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textColor="@color/black"
-                    android:text="Нижний Новгород"
+                    android:text="Москва"
                     app:drawableEndCompat="@drawable/ic_arrow_down"
                     android:drawablePadding="4dp"
+                    android:gravity="center_vertical"
                     app:drawableTint="@color/black" />
 
                 <ImageView
@@ -56,27 +59,47 @@
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
-<!--        <com.google.android.material.tabs.TabLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content">-->
-<!--            <com.google.android.material.tabs.TabItem-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="One"/>-->
-<!--            <com.google.android.material.tabs.TabItem-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Two"/>-->
-<!--        </com.google.android.material.tabs.TabLayout>-->
-
-        <com.google.android.material.chip.ChipGroup
+        <HorizontalScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <com.google.android.material.chip.Chip
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:scrollbars="none">
+
+            <com.google.android.material.chip.ChipGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="text"/>
-        </com.google.android.material.chip.ChipGroup>
+                app:singleLine="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    style="@style/CustomChip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    android:text="Пицца"/>
+
+                <com.google.android.material.chip.Chip
+                    style="@style/CustomChip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    android:text="Комбо"/>
+
+                <com.google.android.material.chip.Chip
+                    style="@style/CustomChip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    android:text="Десерты"/>
+
+                <com.google.android.material.chip.Chip
+                    style="@style/CustomChip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    android:text="Напитки"/>
+            </com.google.android.material.chip.ChipGroup>
+        </HorizontalScrollView>
 
     </com.google.android.material.appbar.AppBarLayout>
 

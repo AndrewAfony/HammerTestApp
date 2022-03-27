@@ -13,4 +13,13 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="CustomChip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@drawable/selected_chip</item>
+        <item name="android:textColor">@drawable/selected_chip_text</item>
+        <item name="chipStartPadding">15dp</item>
+        <item name="chipEndPadding">15dp</item>
+        <item name="android:elevation">3dp</item>
+        <item name="chipCornerRadius">6dp</item>
+    </style>
 </resources>

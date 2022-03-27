@@ -10,4 +10,5 @@
     <color name="gray">#878787</color>
     <color name="light_gray">#F4F4F4</color>
     <color name="button_color">#E91E63</color>
+    <color name="chip_color">#75FF518C</color>
 </resources>
