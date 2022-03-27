@@ -37,14 +37,20 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Нижний Новгород"/>
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/black"
+                    android:text="Нижний Новгород"
+                    app:drawableEndCompat="@drawable/ic_arrow_down"
+                    android:drawablePadding="4dp"
+                    app:drawableTint="@color/black" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
                     android:src="@drawable/ic_qr_code_scanner"
-                    android:layout_marginEnd="16dp"/>
+                    android:layout_marginEnd="16dp"
+                    app:tint="@color/black" />
 
             </com.google.android.material.appbar.MaterialToolbar>
 
@@ -89,6 +95,13 @@
             />
     </androidx.core.widget.NestedScrollView>
 
-
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/light_gray"
+        app:itemTextColor="@drawable/selected_text"
+        app:itemIconTint="@drawable/selected_icon"
+        app:menu="@menu/menu"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
