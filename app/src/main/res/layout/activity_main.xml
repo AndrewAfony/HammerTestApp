@@ -75,29 +75,26 @@
                     style="@style/CustomChip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="4dp"
-                    android:text="Пицца"/>
+                    android:layout_marginStart="4dp"
+                    android:text="Пицца" />
 
                 <com.google.android.material.chip.Chip
                     style="@style/CustomChip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="4dp"
-                    android:text="Комбо"/>
+                    android:text="Комбо" />
 
                 <com.google.android.material.chip.Chip
                     style="@style/CustomChip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="4dp"
-                    android:text="Десерты"/>
+                    android:text="Десерты" />
 
                 <com.google.android.material.chip.Chip
                     style="@style/CustomChip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="4dp"
-                    android:text="Напитки"/>
+                    android:text="Напитки" />
             </com.google.android.material.chip.ChipGroup>
         </HorizontalScrollView>
 
@@ -115,7 +112,17 @@
 
     </androidx.core.widget.NestedScrollView>
 
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:indeterminate="true"
+        android:layout_gravity="top"
+        android:layout_marginTop="55dp"/>
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"

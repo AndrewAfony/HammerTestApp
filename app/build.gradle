@@ -50,6 +50,8 @@ dependencies {
     // Architectural Components
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1"
 
+    implementation 'androidx.activity:activity-ktx:1.4.0'
+
     // Room
     implementation "androidx.room:room-runtime:2.4.2"
     kapt "androidx.room:room-compiler:2.4.2"
@@ -79,5 +81,9 @@ dependencies {
 
     // Coordinator Layout
     implementation "androidx.coordinatorlayout:coordinatorlayout:1.2.0"
+
+    // Glide
+    implementation 'com.github.bumptech.glide:glide:4.13.0'
+    kapt 'com.github.bumptech.glide:compiler:4.13.0'
 
 }

@@ -3,7 +3,7 @@
     <item
         android:id="@+id/menu"
         android:title="Меню"
-        android:icon="@drawable/ic_fast_food"/>
+        android:icon="@drawable/ic_food"/>
 
     <item
         android:id="@+id/profile"

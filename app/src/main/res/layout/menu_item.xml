@@ -12,6 +12,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,7 +23,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Title"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/image_description"
         app:layout_constraintTop_toTopOf="parent" />
@@ -35,22 +37,25 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:text="Description of food"
-        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
         android:textColor="@color/gray"
+        android:maxLines="4"
+        android:ellipsize="end"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/food_image"
         app:layout_constraintTop_toBottomOf="@+id/image_title" />
 
     <Button
+        android:id="@+id/button"
         style="?attr/materialButtonOutlinedStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:text="от 345 р"
         android:textColor="@color/button_color"
-        app:strokeColor="@color/button_color"
         app:layout_constraintBottom_toBottomOf="@+id/food_image"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:strokeColor="@color/button_color" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
