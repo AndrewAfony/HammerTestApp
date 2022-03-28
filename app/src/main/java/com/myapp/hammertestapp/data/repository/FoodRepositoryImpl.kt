@@ -7,6 +7,7 @@ import com.myapp.hammertestapp.domain.model.Drink
 import com.myapp.hammertestapp.domain.repository.FoodRepository
 import com.myapp.hammertestapp.utils.Resource
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException
@@ -19,23 +20,29 @@ class FoodRepositoryImpl @Inject constructor(
 
     override suspend fun getListOfFood(): Flow<Resource<List<Drink>>> = flow {
 
-        val cached = db.dao.getAllFood().first()
-        emit(Resource.Loading(data = cached))
+        emit(Resource.Loading())
 
-        try {
-            val result = api.getListOfFood()
-            db.dao.deleteFood()
-            db.dao.addFood(result.drinks)
-            emit(Resource.Success(result.drinks))
-        } catch (e: HttpException) {
-            emit(Resource.Error(message = e.localizedMessage ?: "Unknown error!"))
-            Log.d("repo", "getListOfFood: ${e.localizedMessage}")
-        } catch (e: HttpException) {
-            emit(Resource.Error(message = e.localizedMessage ?: "Unknown error!"))
-            Log.d("repo", "getListOfFood: ${e.localizedMessage}")
-        } catch (e: Exception) {
-            emit(Resource.Error(message = e.localizedMessage ?: "Unknown error!"))
-            Log.d("repo", "getListOfFood: ${e.localizedMessage}")
+        db.dao.getAllFood().collect {
+            if(it != null && it.isNotEmpty()) emit(Resource.Success(data = it))
+            else {
+                try {
+                    val result = api.getListOfFood()
+                    db.dao.deleteFood()
+                    db.dao.addFood(result.drinks)
+                    emit(Resource.Success(result.drinks))
+                } catch (e: HttpException) {
+                    emit(Resource.Error(message = e.localizedMessage ?: "Unknown error!"))
+                    Log.d("repo", "getListOfFood: ${e.localizedMessage}")
+                } catch (e: HttpException) {
+                    emit(Resource.Error(message = e.localizedMessage ?: "Unknown error!"))
+                    Log.d("repo", "getListOfFood: ${e.localizedMessage}")
+                } catch (e: Exception) {
+                    emit(Resource.Error(message = e.localizedMessage ?: "Unknown error!"))
+                    Log.d("repo", "getListOfFood: ${e.localizedMessage}")
+                }
+            }
         }
+
+
     }
 }

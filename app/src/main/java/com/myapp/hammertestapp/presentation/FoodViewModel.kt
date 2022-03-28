@@ -46,7 +46,6 @@ class FoodViewModel @Inject constructor(
                             isLoading.postValue(false)
                         }
                         is Resource.Loading -> {
-                            food.postValue(result.data)
                             isLoading.postValue(true)
                         }
                     }

@@ -1,4 +1,4 @@
-package com.myapp.hammertestapp
+package com.myapp.hammertestapp.presentation
 
 import android.os.Bundle
 import android.view.View
@@ -14,7 +14,6 @@ import com.myapp.hammertestapp.adapters.MenuAdapter
 import com.myapp.hammertestapp.databinding.ActivityMainBinding
 import com.myapp.hammertestapp.domain.model.Banner
 import com.myapp.hammertestapp.domain.model.Drink
-import com.myapp.hammertestapp.presentation.FoodViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 

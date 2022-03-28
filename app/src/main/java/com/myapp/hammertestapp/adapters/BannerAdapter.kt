@@ -16,9 +16,7 @@ class BannerAdapter(private val data: List<Banner>): RecyclerView.Adapter<Banner
         )
     }
 
-    override fun onBindViewHolder(holder: BannerViewHolder, position: Int) {
-
-    }
+    override fun onBindViewHolder(holder: BannerViewHolder, position: Int) {}
 
     override fun getItemCount(): Int = data.size
 
