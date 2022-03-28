@@ -1,4 +1,18 @@
 <resources>
     <string name="app_name">HammerTestApp</string>
     <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut urna quam. Aliquam fermentum mollis libero, eget aliquet est sodales id. Fusce consequat turpis eget nisl tempus, mollis condimentum augue faucibus. Phasellus euismod neque non elementum imperdiet. Nunc vitae sapien volutpat, pulvinar neque sed, malesuada eros. Mauris pharetra, enim pulvinar interdum semper, enim tellus ornare nisi, sit amet feugiat justo arcu eget massa. Donec viverra efficitur orci, at vestibulum mauris. Aenean quis eros sit amet arcu lobortis vehicula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer gravida in leo quis faucibus. Ut sit amet nisi non enim semper blandit sit amet non nisl. Mauris tellus neque, molestie convallis ligula non, pulvinar tristique neque. Vivamus eget odio lacinia, venenatis nulla non, maximus sem. Donec nec ultricies lectus. Morbi finibus leo ut magna molestie aliquet.</string>
+    <string name="moscow">Москва</string>
+    <string name="qr_code">QR code</string>
+    <string name="pizza">Пицца</string>
+    <string name="combo">Комбо</string>
+    <string name="dessert">Десерты</string>
+    <string name="drinks">Напитки</string>
+    <string name="menu">Меню</string>
+    <string name="profile">Профиль</string>
+    <string name="busket">Корзина</string>
+    <string name="title">Title</string>
+    <string name="description_of_food">Description of food</string>
+    <string name="price">от 345 р</string>
+    <string name="banner">Banner</string>
+    <string name="food">Food</string>
 </resources>

@@ -2,7 +2,6 @@ package com.myapp.hammertestapp.di
 
 import android.app.Application
 import androidx.room.Room
-import androidx.room.RoomDatabase
 import com.myapp.hammertestapp.data.local.FoodDatabase
 import com.myapp.hammertestapp.data.remote.FoodApi
 import com.myapp.hammertestapp.data.repository.FoodRepositoryImpl

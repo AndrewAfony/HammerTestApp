@@ -41,7 +41,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textColor="@color/black"
-                    android:text="Москва"
+                    android:text="@string/moscow"
                     app:drawableEndCompat="@drawable/ic_arrow_down"
                     android:drawablePadding="4dp"
                     android:gravity="center_vertical"
@@ -53,7 +53,8 @@
                     android:layout_gravity="end"
                     android:src="@drawable/ic_qr_code_scanner"
                     android:layout_marginEnd="16dp"
-                    app:tint="@color/black" />
+                    app:tint="@color/black"
+                    android:contentDescription="@string/qr_code" />
 
             </com.google.android.material.appbar.MaterialToolbar>
 
@@ -76,25 +77,25 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
-                    android:text="Пицца" />
+                    android:text="@string/pizza" />
 
                 <com.google.android.material.chip.Chip
                     style="@style/CustomChip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Комбо" />
+                    android:text="@string/combo" />
 
                 <com.google.android.material.chip.Chip
                     style="@style/CustomChip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Десерты" />
+                    android:text="@string/dessert" />
 
                 <com.google.android.material.chip.Chip
                     style="@style/CustomChip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Напитки" />
+                    android:text="@string/drinks" />
             </com.google.android.material.chip.ChipGroup>
         </HorizontalScrollView>
 

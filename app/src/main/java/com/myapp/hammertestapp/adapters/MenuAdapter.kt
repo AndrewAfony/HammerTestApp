@@ -7,7 +7,6 @@ import com.bumptech.glide.Glide
 import com.myapp.hammertestapp.R
 import com.myapp.hammertestapp.databinding.MenuItemBinding
 import com.myapp.hammertestapp.domain.model.Drink
-import com.myapp.hammertestapp.domain.model.MenuItem
 
 class MenuAdapter(private val data: List<Drink>): RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
 

@@ -6,8 +6,9 @@ import com.myapp.hammertestapp.data.remote.FoodApi
 import com.myapp.hammertestapp.domain.model.Drink
 import com.myapp.hammertestapp.domain.repository.FoodRepository
 import com.myapp.hammertestapp.utils.Resource
-import kotlinx.coroutines.coroutineScope
-import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException
 import javax.inject.Inject
 

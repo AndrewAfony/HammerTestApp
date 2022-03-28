@@ -8,7 +8,7 @@ import com.myapp.hammertestapp.domain.model.Banner
 
 class BannerAdapter(private val data: List<Banner>): RecyclerView.Adapter<BannerAdapter.BannerViewHolder>() {
 
-    inner class BannerViewHolder(private val binding: BannerItemBinding): RecyclerView.ViewHolder(binding.root)
+    inner class BannerViewHolder(binding: BannerItemBinding): RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BannerViewHolder {
         return BannerViewHolder(
